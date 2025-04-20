@@ -7,7 +7,7 @@ This project involves compromising a vulnerable service, analyzing the attack us
 - **Group Number**: group-02 
 - **Members**:
   - JOUD ALSAYID (ID: 202154730)
-  - NAJLA ALJALOUD Name (ID: 202170970)
+  - NAJLA ALJALOUD (ID: 202170970)
   - DANAH ALOTAIBI (ID: 202178830)
 
 ## 🧠 Work Distribution
