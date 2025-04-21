@@ -46,7 +46,7 @@ ping 192.168.56.102
 
 ![test connectivity](https://github.com/jalsayid/Security-project/blob/983fe310f387ed02dc4abba13caba27e241a72da/Phase1/screenshots/testing%20VM%20connectivity%20from%20attacker%20(kali).png)
 
-
+---
 
 ## 🔹 Step 3: Create Username and Password Files
 
@@ -115,4 +115,44 @@ monkey
 loveme
 qwertyuiop
 ```
+
+
+📸 Screenshot:
+
+![test connectivity](https://github.com/jalsayid/Security-project/blob/fc2e81dd5e1a870890534e157783733ea46e9bea/Phase1/screenshots/files.png)
+
+---
+
+## 🔹 Step 4: Perform a Basic Nmap Scan
+
+To check which ports are open on the victim machine, we start with a basic Nmap scan from the attacker machine (Kali Linux). This helps us discover services like SSH running on the target.
+
+```bash
+nmap 192.168.56.102
+```
+
+📸 Screenshot:
+
+![test connectivity](https://github.com/jalsayid/Security-project/blob/fc2e81dd5e1a870890534e157783733ea46e9bea/Phase1/screenshots/files.png)
+
+---
+
+## 🔹 Step 5: Perform a Detailed Nmap Scan with `-A`
+
+After confirming that port 22 (SSH) is open using a basic scan, we run a detailed Nmap scan to gather more information about the services and operating system running on the victim machine.
+
+This helps confirm the SSH version and identify the system fingerprint.
+
+```bash
+nmap -A 192.168.56.102
+```
+
+📸 Screenshot:
+
+![test connectivity](https://github.com/jalsayid/Security-project/blob/fc2e81dd5e1a870890534e157783733ea46e9bea/Phase1/screenshots/files.png)
+
+
+
+
+
 
