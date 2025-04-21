@@ -196,7 +196,7 @@ exploit
 
 📸 Screenshot:
 
-![exploit]()
+![exploit](https://github.com/jalsayid/Security-project/blob/a87ff696bbde6c6616b1591cfba139a32d42b197/Phase1/screenshots/exploit.png)
 
 
 
