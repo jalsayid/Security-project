@@ -217,7 +217,7 @@ ssh vagrant@192.168.56.102
 
 📸 Screenshot:
 
-1[access]()
+![access](https://github.com/jalsayid/Security-project/blob/e23fdcf30e6fdb6453551457903f7852a6fd2b9e/Phase1/screenshots/accessing%20the%20system.png)
 
 
 
