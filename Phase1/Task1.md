@@ -28,6 +28,21 @@ ifconfig
 
 
 📸 Screenshot:
-![Victim IP Address](screenshots/ip address of metasploitable 3.png)
+![Victim IP Address](https://github.com/jalsayid/Security-project/blob/dc3eb3a50f16f591446ceccfcf2ff306de2c5ca3/Phase1/screenshots/ip%20address%20of%20metasploitable%203%20(1).png)
+
+---
+
+## 🔹 Step 2: Test Connectivity
+
+On the attacker machine (Kali Linux), we test if the victim machine is reachable over the network. This is done using the `ping` command to ensure that packets can be sent and received from the target IP.
+
+```bash
+ping 192.168.56.102
+```
+
+
+📸 Screenshot:
+
+
 
 
