@@ -84,7 +84,7 @@ python3 /home/kali/Desktop/SSH_exploitScript.py
 This launches the script which tries each username and password combination from the wordlists.
 
 📸 Screenshot:
-![runs](screenshots/entering%20the%20system%20and%20the%20script.png)
+![runs](https://github.com/jalsayid/Security-project/blob/fb306032acd0542b847724f35733bd66a50eacef/Phase1/screenshots/execute.png)
 
 ---
 
@@ -93,6 +93,7 @@ This launches the script which tries each username and password combination from
 As the script runs, it prints out each username and password pair being tested. When the correct credentials are found (`vagrant:vagrant`), the script successfully logs into the victim machine and provides shell access.
 
 📸 Screenshot:  
-![Successful Access](screenshots/entering%20the%20system%20and%20the%20script.png)
+![Successful Access](https://github.com/jalsayid/Security-project/blob/fb306032acd0542b847724f35733bd66a50eacef/Phase1/screenshots/entering%20the%20system%20and%20the%20script.png
+)
 
 
