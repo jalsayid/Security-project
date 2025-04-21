@@ -70,5 +70,29 @@ def main():
 if __name__ == "__main__":
     main()
 ```
+---
+
+## 🔹 Step 2: Execute the Custom Script
+
+Before running the script, we need to make it executable. Then, we execute it to start the brute-force attack.
+
+```bash
+chmod +x /home/kali/Desktop/SSH_exploitScript.py
+python3 /home/kali/Desktop/SSH_exploitScript.py
+```
+
+This launches the script which tries each username and password combination from the wordlists.
+
+📸 Screenshot:
+![runs](screenshots/entering%20the%20system%20and%20the%20script.png)
+
+---
+
+## 🔹 Step 3: Confirm Successful Access from Script Output
+
+As the script runs, it prints out each username and password pair being tested. When the correct credentials are found (`vagrant:vagrant`), the script successfully logs into the victim machine and provides shell access.
+
+📸 Screenshot:  
+![Successful Access](screenshots/entering%20the%20system%20and%20the%20script.png)
 
 
