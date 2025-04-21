@@ -198,6 +198,13 @@ exploit
 
 ![exploit](https://github.com/jalsayid/Security-project/blob/fb682b5fb6b259664e036a31aa080a29f03a578f/Phase1/screenshots/exploit2.png)
 
+After running the exploit, Metasploit successfully finds a valid username and password combination that grants SSH access to the victim machine.
+
+In our case, the following credentials were discovered:
+
+username: vagrant
+password: vagrant
+
 
 
 
