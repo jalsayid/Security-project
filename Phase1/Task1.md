@@ -28,6 +28,7 @@ ifconfig
 
 
 📸 Screenshot:
+
 ![Victim IP Address](https://github.com/jalsayid/Security-project/blob/dc3eb3a50f16f591446ceccfcf2ff306de2c5ca3/Phase1/screenshots/ip%20address%20of%20metasploitable%203%20(1).png)
 
 ---
@@ -43,6 +44,75 @@ ping 192.168.56.102
 
 📸 Screenshot:
 
+![test connectivity](https://github.com/jalsayid/Security-project/blob/983fe310f387ed02dc4abba13caba27e241a72da/Phase1/screenshots/testing%20VM%20connectivity%20from%20attacker%20(kali).png)
 
 
+
+## 🔹 Step 3: Create Username and Password Files
+
+Before running the brute-force attack, we need to prepare two text files:
+- One containing possible usernames.
+- One containing possible passwords.
+
+These files will be used by Metasploit's `ssh_login` module.
+
+Example content for `username` file:
+```bash
+msfadmin
+admin
+root
+user
+test
+postgres
+ubuntu
+kali
+vagrant
+guest
+oracle
+administrator
+ftp
+support
+webadmin
+sysadmin
+backup
+mysql
+pi
+john
+```
+
+Example content for `password` file:
+```bash
+msfadmin
+admin
+123456
+password
+12345
+123456789
+12345678
+1234
+1234567
+1234567890
+admin123
+root
+toor
+kali
+guest
+letmein
+qwerty
+abc123
+111111
+123123
+vagrant
+welcome
+iloveyou
+password1
+123qwe
+1q2w3e4r
+000000
+passw0rd
+dragon
+monkey
+loveme
+qwertyuiop
+```
 
