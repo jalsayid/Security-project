@@ -205,6 +205,22 @@ In our case, the following credentials were discovered:
 username: vagrant
 password: vagrant
 
+---
+
+## 🔹 Step 8: Access the Victim System via SSH
+
+After discovering the correct credentials (`vagrant:vagrant`), we manually access the victim machine from Kali Linux using the `ssh` command.
+
+```bash
+ssh vagrant@192.168.56.102
+```
+
+📸 Screenshot:
+
+1[access]()
+
+
+
 
 
 
