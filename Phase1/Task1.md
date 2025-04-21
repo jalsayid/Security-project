@@ -133,7 +133,7 @@ nmap 192.168.56.102
 
 📸 Screenshot:
 
-![test connectivity](https://github.com/jalsayid/Security-project/blob/fc2e81dd5e1a870890534e157783733ea46e9bea/Phase1/screenshots/files.png)
+![test connectivity](https://github.com/jalsayid/Security-project/blob/83631ae4769ad8e04f964d0a4d6c37bc944ce80a/Phase1/screenshots/nmap.png)
 
 ---
 
@@ -149,7 +149,8 @@ nmap -A 192.168.56.102
 
 📸 Screenshot:
 
-![test connectivity](https://github.com/jalsayid/Security-project/blob/fc2e81dd5e1a870890534e157783733ea46e9bea/Phase1/screenshots/files.png)
+![test connectivity](https://github.com/jalsayid/Security-project/blob/83631ae4769ad8e04f964d0a4d6c37bc944ce80a/Phase1/screenshots/nmap%20-a.png
+)
 
 
 
