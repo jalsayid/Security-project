@@ -2,15 +2,6 @@
 
 This project demonstrates a controlled SSH brute force attack and subsequent analysis using Splunk SIEM and comprehensive log analysis through Splunk's SIEM capabilities.
 
-![Project Overview](images/project_overview.png)
-
-## Phase 1: SSH Brute Force Attack Using a Script
-
-This phase focuses on setting up the attack environment and executing a controlled SSH brute force attack.
-
-![SSH Brute Force Attack](images/ssh_bruteforce.png)
-*Insert SSH brute force attack diagram here*
-
 ### 1. Environment Setup
 
 In this phase, we set up two virtual machines (VMs) using VirtualBox:
