@@ -126,7 +126,7 @@ An SSH brute-force attack was executed before implementing Fail2Ban. The system 
 
 📷 **Screenshot:** successful brute-force attempts (Before implementing the defense)
 
-![successful brute-force attempts](https://github.com/jalsayid/Security-project/blob/a87a69e9aa9367f09cd98f5b00672528299b6e53/Phase3/screenshots/7-%20successful%20brute-force%20attempts%20(before%20defense).png)
+![successful brute-force attempts](https://github.com/jalsayid/Security-project/blob/b978ffc84ec3268c87ae3c92f3e245b3f5744643/Phase3/screenshots/7-%20successful%20brute-force%20attempts%20(before%20defense).png)
 
 
 ---
