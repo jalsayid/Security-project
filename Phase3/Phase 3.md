@@ -30,7 +30,10 @@ Then, install Fail2Ban:
 sudo apt install fail2ban
 ```
 
-📷 **Image 1:** Fail2Ban Installation Screenshot
+📷 **Screenshot:** Fail2Ban Installation Screenshot
+
+![Fail2Ban Installation Screenshot](https://github.com/jalsayid/Security-project/blob/a8eee4dd43cdfb4b6324600158eaad5f88705391/Phase3/screenshots/1-%20install%20Fail2ban.png)
+
 
 ---
 
@@ -42,7 +45,10 @@ To avoid having configuration changes overwritten during future updates, copy th
 sudo cp /etc/fail2ban/jail.conf /etc/fail2ban/jail.local
 ```
 
-📷 **Image 2:** Copying the configuration file
+📷 **Screenshot:** Copying the configuration file
+
+![Copying the configuration file](https://github.com/jalsayid/Security-project/blob/a8eee4dd43cdfb4b6324600158eaad5f88705391/Phase3/screenshots/2-%20create%20a%20local%20copy%20of%20the%20configuration%20file.png)
+
 
 Open the copied file to edit:
 
@@ -50,7 +56,10 @@ Open the copied file to edit:
 sudo nano /etc/fail2ban/jail.local
 ```
 
-📷 **Image 3:** Opening the configuration file
+📷 **Screenshot:** Opening the configuration file
+
+![Opening the configuration file](https://github.com/jalsayid/Security-project/blob/a8eee4dd43cdfb4b6324600158eaad5f88705391/Phase3/screenshots/3-%20Opening%20the%20configuration%20file.png)
+
 
 Scroll to the `[sshd]` section and update the settings as follows:
 
@@ -64,7 +73,10 @@ maxretry = 3
 bantime = 600
 ```
 
-📷 **Image 4:** SSH jail configuration
+📷 **Screenshot:** SSH jail configuration
+
+![SSH jail configuration](https://github.com/jalsayid/Security-project/blob/a8eee4dd43cdfb4b6324600158eaad5f88705391/Phase3/screenshots/4-%20SSH%20jail%20configuration.png)
+
 
 ### Explanation of Key Settings:
 - `enabled`: Activates SSH protection
@@ -84,7 +96,10 @@ Restart the service to apply the configuration changes:
 sudo service fail2ban restart
 ```
 
-📷 **Image 4 (continued):** Service restarted successfully
+📷 **Screenshot:** Service restarted successfully
+
+![Service restarted successfully](https://github.com/jalsayid/Security-project/blob/10d0b3024f0da7590070cb69067245178786bce5/Phase3/screenshots/5-%20Service%20restarted%20successfully.png)
+
 
 ---
 
@@ -96,7 +111,10 @@ To check if the Fail2Ban jail for SSH is active and monitoring:
 sudo fail2ban-client status sshd
 ```
 
-📷 **Image 5:** SSH jail status showing active monitoring
+📷 **Screenshot:** SSH jail status showing active monitoring
+
+![SSH jail status showing active monitoring](https://github.com/jalsayid/Security-project/blob/bb7a2de3cb2df65feeef8bff98849766469cc07a/Phase3/screenshots/6-%20Verify%20Fail2Ban%20Status%20before%20the%20attack.png)
+
 
 ---
 
@@ -106,7 +124,10 @@ sudo fail2ban-client status sshd
 
 An SSH brute-force attack was executed before implementing Fail2Ban. The system did not block the attacker, and repeated failed login attempts were allowed without limitation.
 
-📷 **Image 6:** Screenshot showing successful brute-force attempts
+📷 **Screenshot:** successful brute-force attempts (Before implementing the defense)
+
+![successful brute-force attempts](https://github.com/jalsayid/Security-project/blob/a87a69e9aa9367f09cd98f5b00672528299b6e53/Phase3/screenshots/7-%20successful%20brute-force%20attempts%20(before%20defense).png)
+
 
 ---
 
@@ -114,5 +135,11 @@ An SSH brute-force attack was executed before implementing Fail2Ban. The system 
 
 After configuring Fail2Ban, the same brute-force attack was attempted. This time, the attacker’s IP was automatically banned after failed login attempts.
 
-📷 **Image 7:** Failed login attempts  
-📷 **Image 8:** IP address successfully banned and blocked
+📷 **Screenshot:** Failed login attempts  
+
+![Failed login attempts](https://github.com/jalsayid/Security-project/blob/787d80aac202830d445e59588daca8667d176aec/Phase3/screenshots/8%20-%20Failed%20login%20attempts%20(After%20defense).png)
+
+📷 **Screenshot:** IP address successfully banned and blocked
+
+![IP address successfully banned and blocked](https://github.com/jalsayid/Security-project/blob/a1d24e013f1aa14396684499ca47376491c6efad/Phase3/screenshots/9-%20SSH%20jail%20status%20showing%20IP%20address%20successfully%20banned%20and%20blocked.png)
+
