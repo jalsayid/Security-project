@@ -150,89 +150,13 @@ After the attack, use Splunk's search and visualization tools to analyze the att
 
 ![Failed Logins](https://github.com/jalsayid/Security-project/blob/eb4658578cd19cdc0129b608324c9d82e7598956/Phase2/screenshots/10.png)
 
-Use the following query to identify failed login attempts:
-
-```
-index=* sourcetype=syslog "Failed password" | rex "user (?<user>\w+).*from (?<ip>\d+\.\d+\.\d+\.\d+)" | stats count by ip, user
-```
-
-This will generate a bar chart showing the number of failed attempts per user and IP.
 
 #### Search 2: Successful Login Detection (Victim Side)
 
 ![Successful Logins](https://github.com/jalsayid/Security-project/blob/eb4658578cd19cdc0129b608324c9d82e7598956/Phase2/screenshots/11.png)
 
-To identify when the attacker successfully logged in, use:
-
-```
-index=* sourcetype=syslog "Accepted password" | rex "for (?<user>\w+) from (?<ip>\d+\.\d+\.\d+\.\d+)" | table _time, user, ip
-```
-
-This query will show the exact timestamp and the source IP when the valid credentials were accepted.
-
-#### Search 3: Attacker's Log Analysis (Kali Side)
-
-![Attacker Logs](images/attacker_logs.png)
-*Insert attacker log analysis screenshot here*
-
-Hydra logs from Kali can be analyzed with:
-
-```
-index=* sourcetype="attacker_log"
-| rex "host:\s(?<ip>\d+\.\d+\.\d+\.\d+).*login:\s(?<user>\w+).*password:\s(?<pass>\w+)"
-| table ip, user, pass
-```
-
-This will display the extracted credentials used by the attacker.
-
-## Phase 3: SIEM Dashboard Analysis
-
-### SIEM Setup: Integration of Logs
-
-![SIEM Integration](images/siem_integration.png)
-
-In this phase, we integrated logs from both victim and attacker environments into our Splunk SIEM. This provides a comprehensive view of the attack from both perspectives and enables more robust analysis. The integration involved:
-
-- Configuring the Splunk Universal Forwarder on the victim machine
-- Setting up custom log monitoring for attack tools on the attacker machine
-- Establishing a centralized dashboard for all security events
-
-### Log Visualization and Analysis
-
-![Attack Visualization](https://github.com/jalsayid/Security-project/blob/eb4658578cd19cdc0129b608324c9d82e7598956/Phase2/screenshots/9.png)
-*Insert screenshot of attack visualization and analysis dashboard*
-
-Our visualization approach focused on:
-- Timeline analysis of the attack progression
-- Identification of attack patterns and brute force signature
-- Real-time monitoring capabilities for rapid detection
-- Correlation between source IPs and targeted accounts
 
 
-## Log Analysis Summary
-
-![Summary Dashboard](https://github.com/jalsayid/Security-project/blob/eb4658578cd19cdc0129b608324c9d82e7598956/Phase2/screenshots/9.png)
-*Insert screenshot of summary dashboard*
-
-- **Failed Login Attempts**: Over 65 failed attempts were recorded before a successful login was made.
-- **Successful Login**: The successful login occurred with the credentials vagrant:vagrant.
-- **Source IP**: All failed and successful login attempts originated from Kali's IP (192.168.56.104).
-- **Hydra Log Analysis**: The credentials used in the attack were captured in both Hydra logs and SSH logs, providing complete visibility of the attack.
-- **Attack Duration**: The entire brute force process took approximately [X] minutes from start to finish.
-- **Detection Time**: Our SIEM alerts were triggered within [Y] seconds of the attack initiation.
-
-## Final Visualizations
-
-Using Splunk, we created the following visualizations to monitor and analyze the attack:
-- Bar Chart: Failed login attempts by username and IP
-- Timechart: Number of failed attempts over time
-- Table: Extracted credentials from Hydra
-- Bar Chart: Timestamp of successful logins
-- Heatmap: Intensity of login attempts over time
-- Pie Chart: Distribution of targeted accounts
-- Gauge: Success rate of the brute force attack
-
-This demonstrates how Splunk can be used to monitor, analyze, and visualize a brute-force SSH attack in real-time.
 
 ## Conclusion
 
